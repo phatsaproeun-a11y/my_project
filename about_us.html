@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siem Reap Tourism</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* Updated to a deep blue color */
+        }
+
+        /* Full-screen background image container */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Styles for the timeline sections */
+        .timeline-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        .content-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(2px);
+            border-radius: 1rem;
+            padding: 2rem;
+            max-width: 40rem;
+            color: white;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .content-overlay.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white py-4 shadow-lg sticky top-0 z-40">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+        <div class="text-3xl font-bold text-gray-800">
+            <a href="/Mainn/home.html">Siem Reap Tourism</a>
+        </div>
+
+        <nav class="hidden md:block">
+            <ul class="flex items-center space-x-6 lg:space-x-8">
+                <li><a href="/Mainn/home.html" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium">Home</a></li>
+                <li class="relative group">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium">Explore</a>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block bg-white min-w-[160px] shadow-xl z-10 py-2 rounded-lg mt-2">
+                        <a href="/explore/natural.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Natural</a>
+                        <a href="/explore/culture.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Culture</a>
+                        <a href="/explore/modern.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Modern</a>
+                        <a href="/explore/innovative.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Innovative</a>
+                        <a href="/explore/hotel&food.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Hotel&Food</a>
+                    </div>
+                </li>
+                <li><a href="#" class="text-blue-600 hover:text-blue-600 transition-colors duration-300 text-lg font-medium">About Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+            <button id="mobile-menu-button" class="md:hidden text-gray-800 text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+
+              <a href="#" class="hidden md:block">
+                <img src="https://i.pinimg.com/1200x/89/1b/85/891b85731c9aa43d9199f71365d5aae1.jpg" 
+                     alt="buddha Flag"
+                     class="w-14 h-auto object-cover hover:opacity-80 transition-opacity shadow-md">
+            </a>
+              <a href="#" class="hidden md:block">
+                <img src="https://flagcdn.com/w40/kh.png" 
+                     alt="Cambodia Flag"
+                     class="w-14 h-auto object-cover hover:opacity-80 transition-opacity shadow-md">
+            </a>
+            <a href="#" class="hidden md:block">
+                <img src="https://i.pinimg.com/1200x/e3/1c/2f/e31c2f6886c0747f08c428116ec30e6f.jpg" 
+                     alt="Royal Flag"
+                     class="w-14 h-auto object-cover hover:opacity-80 transition-opacity shadow-md">
+            </a>
+        </div>
+    </div>
+</header>
+
+    <!-- Full-screen background image, updated via JavaScript -->
+    <div id="background-container" class="background-container">
+        <img id="background-image" class="background-image" src="" alt="Timeline Background">
+    </div>
+
+    <!-- Timeline Sections -->
+    <div class="main-timeline-container">
+
+        <!-- Phase 1: Concept & Planning -->
+        <div class="timeline-section" data-image="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop">
+            <div class="content-overlay">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Phase 1: Concept & Planning</h1>
+                <p class="text-lg md:text-xl text-gray-200 drop-shadow-md">
+                    We started with brainstorming sessions and created a detailed roadmap to guide the project from start to finish. This phase was all about laying the groundwork.
+                </p>
+            </div>
+        </div>
+
+        <!-- Phase 2: Design & Development -->
+        <div class="timeline-section" data-image="https://img.freepik.com/free-photo/web-design-concept-with-drawings_1134-77.jpg?semt=ais_incoming&w=740&q=80">
+            <div class="content-overlay">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Phase 2: Design & Development</h1>
+                <p class="text-lg md:text-xl text-gray-200 drop-shadow-md">
+                    Our team began building the core components, focusing on user experience and creating a functional prototype. This is where our ideas truly came to life.
+                </p>
+            </div>
+        </div>
+
+        <!-- Phase 3: Testing & Refinement -->
+        <div class="timeline-section" data-image="https://i.pinimg.com/1200x/d9/a8/88/d9a88886f9bb13fb217ea15a51469753.jpg">
+            <div class="content-overlay">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Phase 3: Testing & Refinement</h1>
+                <p class="text-lg md:text-xl text-gray-200 drop-shadow-md">
+                    We conducted extensive testing to identify and fix bugs, ensuring a smooth and reliable experience for the final product. User feedback was crucial in this stage.
+                </p>
+            </div>
+        </div>
+
+        
+
+        <!-- Phase 4: User Feedback & Iteration -->
+        <div class="timeline-section" data-image="https://i.pinimg.com/1200x/e8/84/4a/e8844a921d68f77e665dfa88f3819b42.jpg">
+            <div class="content-overlay">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Phase 4: User Feedback & Iteration</h1>
+                <p class="text-lg md:text-xl text-gray-200 drop-shadow-md">
+                    Following the initial launch, we actively listened to our users, gathered valuable feedback, and began planning for the next round of feature enhancements and bug fixes.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Phase 5: Final Release & Post-Launch Support -->
+        <div class="timeline-section" data-image="https://i.pinimg.com/736x/25/13/dc/2513dcce7c76fa38fb89b9403511b7d0.jpg">
+            <div class="content-overlay">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Phase 5: Final Release & Post-Launch Support</h1>
+                <p class="text-lg md:text-xl text-gray-200 drop-shadow-md">
+                    The project reached its final version with a major release. We continue to provide support and are now focused on long-term maintenance and future-proofing the platform.
+                </p>
+            </div>
+        </div>
+        
+      
+    </div>
+
+    
+<footer class="bg-gray-800 text-gray-300 py-12 border-t border-gray-700">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <h3 class="text-white text-2xl font-bold mb-4">Siem Reap Tourism</h3>
+                <p class="text-sm leading-relaxed">
+                    Explore the rich history and breathtaking beauty of Siem Reap, the gateway to the magnificent temples of Angkor.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="text-white text-xl font-semibold mb-4">Explore</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-blue-400 transition-colors duration-300">Angkor Wat</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors duration-300">Tonle Sap Lake</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors duration-300">Phnom Kulen</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition-colors duration-300">Phare, The Circus</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white text-xl font-semibold mb-4">Contact</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2"><span class="text-blue-400"><i class="fas fa-phone"></i></span><span>(855) 81 816 685</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-blue-400"><i class="fas fa-envelope"></i></span><span>phanrithy16@gmail.com</span></li>
+                    <li class="flex items-center space-x-2"><span class="text-blue-400"><i class="fas fa-map-marker-alt"></i></span><span>Siem Reap, Cambodia</span></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-white text-xl font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Facebook" class="text-blue-400 hover:text-white transition-colors duration-300 text-2xl"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" aria-label="Twitter" class="text-blue-400 hover:text-white transition-colors duration-300 text-2xl"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" aria-label="Instagram" class="text-blue-400 hover:text-white transition-colors duration-300 text-2xl"><i class="fab fa-instagram-square"></i></a>
+                    <a href="#" aria-label="YouTube" class="text-blue-400 hover:text-white transition-colors duration-300 text-2xl"><i class="fab fa-youtube-square"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 mt-12 pt-6 border-t border-gray-700 text-center text-sm">
+            &copy; 2025 Siem Reap Tourism. All rights reserved.
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-blue-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        const backgroundContainer = document.getElementById('background-container');
+        const backgroundImage = document.getElementById('background-image');
+        const sections = document.querySelectorAll('.timeline-section');
+        const contentOverlays = document.querySelectorAll('.content-overlay');
+
+        // Initial setup for the first section
+        function initializeTimeline() {
+            const firstImage = sections[0].getAttribute('data-image');
+            backgroundImage.src = firstImage;
+            backgroundContainer.style.opacity = '1';
+        }
+
+        // Intersection Observer to handle section visibility and background updates
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const imageUrl = entry.target.getAttribute('data-image');
+                    const contentOverlay = entry.target.querySelector('.content-overlay');
+
+                    // Fade out current image, update source, then fade in
+                    backgroundContainer.style.opacity = '0';
+                    setTimeout(() => {
+                        backgroundImage.src = imageUrl;
+                        backgroundContainer.style.opacity = '1';
+                    }, 1000); // Matches CSS transition duration
+
+                    // Add the 'is-visible' class to trigger the content animation
+                    contentOverlay.classList.add('is-visible');
+                } else {
+                    // Remove the 'is-visible' class when the section is not in view
+                    const contentOverlay = entry.target.querySelector('.content-overlay');
+                    contentOverlay.classList.remove('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.5 // Trigger when 50% of the section is visible
+        });
+
+        // Observe each timeline section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeTimeline();
+        });
+        
+    </script>
+</body>
+</html>
